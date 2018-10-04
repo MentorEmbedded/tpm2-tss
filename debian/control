@@ -1,0 +1,60 @@
+Source: tpm2-tss
+Section: libs
+Priority: optional
+Maintainer: Cedric Hombourger <cedric_hombourger@mentor.com>
+Build-Depends: autoconf,
+               autoconf-archive,
+               debhelper (>= 10),
+               docbook-xsl,
+               git,
+               libcmocka-dev (>= 1.0),
+               libgcrypt20-dev,
+               libtool,
+               pkg-config,
+               xsltproc
+Homepage: https://github.com/01org/TPM2.0-TSS
+Standards-Version: 4.1.3
+Vcs-Git: https://github.com/MentorEmbedded/tpm2-tss.git
+
+Package: libsapi0
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: TPM2 Software stack library - TSS and TCTI libraries
+ TPM2.0 TSS (Software Stack) consists of API layers provided to support
+ TPM 2.0 chips. It is made out of three layers:
+ .
+   - System API (SAPI), which implements the system layer API;
+   - TPM Command Transmission Interface (TCTI), which is used by SAPI to
+     allow communication with the TAB/RM layer;
+ .
+ This package contains the TSS and TCTI libraries that client applications
+ will link against when they require accessing the TPM.
+
+Package: libsapi-dev
+Architecture: any
+Section: libdevel
+Depends: libsapi0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Description: TPM2 Software stack library - development files
+ TPM2.0 TSS (Software Stack) consists of API layers provided to support
+ TPM 2.0 chips. It is made out of three layers:
+ .
+   - System API (SAPI), which implements the system layer API;
+   - TPM Command Transmission Interface (TCTI), which is used by SAPI to
+     allow communication with the TAB/RM layer;
+ .
+ This package contains development files for use when writing applications
+ that need access to TPM chips.
+
+Package: libsapi-utils
+Architecture: any
+Section: utils
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: TPM2 Software stack library - TSS utilities
+ TPM2.0 TSS (Software Stack) consists of API layers provided to support
+ TPM 2.0 chips. It is made out of three layers:
+ .
+   - System API (SAPI), which implements the system layer API;
+   - TPM Command Transmission Interface (TCTI), which is used by SAPI to
+     allow communication with the TAB/RM layer;
+ .
+ This package contains utilities and test applications for use with TPM.

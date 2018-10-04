@@ -1,0 +1,6 @@
+libsapi-dev_1.4.0-2_amd64.deb libdevel optional
+libsapi-utils-dbgsym_1.4.0-2_amd64.deb debug extra
+libsapi-utils_1.4.0-2_amd64.deb utils optional
+libsapi0-dbgsym_1.4.0-2_amd64.deb debug extra
+libsapi0_1.4.0-2_amd64.deb libs optional
+tpm2-tss_1.4.0-2_amd64.buildinfo libs optional
